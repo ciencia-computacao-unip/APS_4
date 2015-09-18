@@ -7,6 +7,13 @@ Neste trabalho, é pedido aos alunos que programem uma versão simplificada do b
 ![genius](https://cloud.githubusercontent.com/assets/5847145/9951744/097093b2-5da1-11e5-9582-aceaabc08caa.png)
 <br/>
 
+## Instruções
+- O problema deve ser resolvido através de um programa em Java;
+- O código-fonte deve estar devidamente comentado;
+- Não serão aceitos trabalhos que caracterizem cópia (mesma estrutura e algumas pequenas modificações) de outro ou de códigos da internet;
+- Eventualmente, após a entrega dos trabalhos serão marcadas entrevistas com cada um dos alunos para apresentação dos mesmos para o professor.
+<br/>
+
 ## Apresentação do trabalho
 1. O grupo deverá ser composto de até 4 alunos e cadastrado em [aqui](http://trabalhosacademicos.unip.br/entrega/).
 
