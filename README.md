@@ -32,6 +32,16 @@ Neste trabalho, é pedido aos alunos que programem uma versão simplificada do b
 Somente serão atribuídos pontos extras ao trabalho se a nota original for maior ou igual a 7.
 - [ ] Melhor interface (somente um trabalho): 2pts;
 - [ ] Efeitos Sonoros: 1pt.
+<br/>
+
+## Avaliação
+- [ ] Funcionamento adequado do programa e compilação (códigos que não compilem serão zerados, e warnings diminuirão a nota);
+- [ ] Corretude (independente se gerado por IDE ou manualmente).
+- [ ] Atendimento ao enunciado do trabalho;
+- [ ] Comentários;
+- [ ] Indentação do código;
+- [ ] Usabilidade e adequação dos componentes da interface gráfica.
+<br/>
 
 ## Apresentação do trabalho
 1. O grupo deverá ser composto de até 4 alunos e cadastrado em [aqui](http://trabalhosacademicos.unip.br/entrega/).
