@@ -13,7 +13,7 @@ Existem também 4 níveis de dificuldade:
 - Sequência de tamanho 14 no máximo;
 - Sequência de tamanho 20 no máximo;
 - Sequência de tamanho 31 no máximo.
-<br/>
+
 Caso o jogador acerte a sequência máxima, ele vence. Caso usuário erre algum botão de qualquer sequência, ele perde.<br/>
 
 ## Enunciado
