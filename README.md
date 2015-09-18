@@ -1,7 +1,21 @@
 # APS_4
 APS do 4° Semestre de Ciência da Computação
-
 <br/>
+
+##Como se Joga?
+O brinquedo Genius é um jogo para um único jogador, este foi o primeiro jogo eletrônico vendido no Brasil. O objetivo do jogo é repetir, sem erros, a sequência de luzes e cores apresentada pelo brinquedo, que possui quatro botões de cores diferentes. A cada rodada, a sequência apresentada pelo brinquedo aumenta até atingir um valor máximo. Existem 3 tipos de jogos:
+- Repita a sequência;
+- Crie sua própria sequência;
+- Repita a sequência com tempo limitado ao tamanho máximo da sequencia em segundos.
+
+Existem também 4 níveis de dificuldade:
+- Sequência de tamanho 8 no máximo;
+- Sequência de tamanho 14 no máximo;
+- Sequência de tamanho 20 no máximo;
+- Sequência de tamanho 31 no máximo.
+<br/>
+Caso o jogador acerte a sequência máxima, ele vence. Caso usuário erre algum botão de qualquer sequência, ele perde.<br/>
+
 ## Enunciado
 Neste trabalho, é pedido aos alunos que programem uma versão simplificada do brinquedo Genius, utilizando obrigatoriamente a linguagem Java.<br/>
 ![genius](https://cloud.githubusercontent.com/assets/5847145/9951744/097093b2-5da1-11e5-9582-aceaabc08caa.png)
