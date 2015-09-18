@@ -2,9 +2,9 @@
 APS do 4° Semestre de Ciência da Computação
 
 <br/>
-## TEMA
-Desenvolvimento de um jogo com utilização de Interface Gráfica
-
+## Enunciado
+Neste trabalho, é pedido aos alunos que programem uma versão simplificada do brinquedo Genius, utilizando obrigatoriamente a linguagem Java.<br/>
+![genius](https://cloud.githubusercontent.com/assets/5847145/9951744/097093b2-5da1-11e5-9582-aceaabc08caa.png)
 <br/>
 ## Proposta do trabalho
 Pede-se aos alunos que desenvolvam um jogo com interface gráfica utilizando a linguagem Java. O tema do jogo tem que conter a educação ambiental tendo como base a vida numa grande metrópole.
