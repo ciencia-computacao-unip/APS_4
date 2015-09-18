@@ -14,6 +14,11 @@ Neste trabalho, é pedido aos alunos que programem uma versão simplificada do b
 - Eventualmente, após a entrega dos trabalhos serão marcadas entrevistas com cada um dos alunos para apresentação dos mesmos para o professor.
 <br/>
 
+## Pontos Extras
+Somente serão atribuídos pontos extras ao trabalho se a nota original for maior ou igual a 7.
+- [ ] Melhor interface (somente um trabalho): 2pts;
+- [ ] Efeitos Sonoros: 1pt.
+
 ## Apresentação do trabalho
 1. O grupo deverá ser composto de até 4 alunos e cadastrado em [aqui](http://trabalhosacademicos.unip.br/entrega/).
 
