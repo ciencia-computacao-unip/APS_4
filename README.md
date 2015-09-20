@@ -54,8 +54,7 @@ O brinquedo Genius, com seus 3 tipos de jogos e 4 níveis de dificuldade.
 - [ ] Há total liberdade quanto ao desenho da interface, no entanto, deve ser utilizado o maior número de componentes gráficos (AWT/Swing) quanto possível (pelo menos oito)
 - [ ] A não utilização de bom número de componentes acarretará em diminuição da nota.
 - [ ] Também deverá ser criada uma base de dados com dados estatísticos das jogadas, como número de tentativas realizadas, número de tentativas assertivas, e número de tentativas não assertivas;
-  - [ ] Deve permitir o usuário consultar as estatísticas armazenadas, por usuário, tipo de jogo
-- [ ] Nível de dificuldade;
+  - [ ] Deve permitir o usuário consultar as estatísticas armazenadas, por usuário, tipo de jogo e nível de dificuldade;
 - [ ] No inicio do jogo deve ser solicitado um nome/apelido do usuário que irá jogar.
 - [ ] Devem ser utilizadas classes interna e / ou interna anônima.
 - [ ] O sistema deve ser constituído de pelo menos 03 classes públicas concretas.
