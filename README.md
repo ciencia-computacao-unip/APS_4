@@ -1,54 +1,62 @@
 # APS_4
 APS do 4° Semestre de Ciência da Computação
-
 <br/>
-## TEMA
-Desenvolvimento de um jogo com utilização de Interface Gráfica
 
+##Como se Joga?
+O brinquedo Genius é um jogo para um único jogador, este foi o primeiro jogo eletrônico vendido no Brasil. O objetivo do jogo é repetir, sem erros, a sequência de luzes e cores apresentada pelo brinquedo, que possui quatro botões de cores diferentes. A cada rodada, a sequência apresentada pelo brinquedo aumenta até atingir um valor máximo. Existem 3 tipos de jogos:
+- [ ] Repita a sequência;
+- [ ] Crie sua própria sequência;
+- [ ] Repita a sequência com tempo limitado ao tamanho máximo da sequencia em segundos.
+
+Existem também 4 níveis de dificuldade:
+- [ ] Sequência de tamanho 8 no máximo;
+- [ ] Sequência de tamanho 14 no máximo;
+- [ ] Sequência de tamanho 20 no máximo;
+- [ ] Sequência de tamanho 31 no máximo.
+
+Caso o jogador acerte a sequência máxima, ele vence. Caso usuário erre algum botão de qualquer sequência, ele perde.<br/>
+
+## Enunciado
+Neste trabalho, é pedido aos alunos que programem uma versão simplificada do brinquedo Genius, utilizando obrigatoriamente a linguagem Java.<br/>
+![genius](https://cloud.githubusercontent.com/assets/5847145/9951744/097093b2-5da1-11e5-9582-aceaabc08caa.png)
 <br/>
-## Proposta do trabalho
-Pede-se aos alunos que desenvolvam um jogo com interface gráfica utilizando a linguagem Java. O tema do jogo tem que conter a educação ambiental tendo como base a vida numa grande metrópole.
 
-### Observações
-1. Quaisquer componentes gráficos poderão ser utilizados, desde que desenvolvidos na linguagem Java.
+## Instruções
+- [ ] O problema deve ser resolvido através de um programa em Java;
+- [ ] O código-fonte deve estar devidamente comentado;
+- [ ] Não serão aceitos trabalhos que caracterizem cópia (mesma estrutura e algumas pequenas modificações) de outro ou de códigos da internet;
+- [ ] Eventualmente, após a entrega dos trabalhos serão marcadas entrevistas com cada um dos alunos para apresentação dos mesmos para o professor.
+<br/>
 
-2. A escolha do número de jogadores que participarão do jogo fica a cargo do grupo.
+## Pontos Extras
+Somente serão atribuídos pontos extras ao trabalho se a nota original for maior ou igual a 7.
+- [ ] Melhor interface (somente um trabalho): 2pts;
+- [ ] Efeitos Sonoros: 1pt.
+<br/>
 
-3. O grupo deverá fazer uma dissertação sobre todos os elementos utilizados no desenvolvimento do projeto, assim como o efeito desse trabalho na sua formação e discutir a interdisciplinaridade envolvida no mesmo.
+## Avaliação
+- [ ] Funcionamento adequado do programa e compilação (códigos que não compilem serão zerados, e warnings diminuirão a nota);
+- [ ] Corretude (independente se gerado por IDE ou manualmente).
+- [ ] Atendimento ao enunciado do trabalho;
+- [ ] Comentários;
+- [ ] Indentação do código;
+- [ ] Usabilidade e adequação dos componentes da interface gráfica.
+<br/>
 
-4. O nível de refinamento, funcionalidade, complexidade, tratamento de erros, funções extras e relatórios adicionais implementados neste sistema, terão impacto direto na nota final deste trabalho.
-
-5. A nota atribuída ao trabalho entregue configura a nota das APS.
-
-
-## Apresentação do trabalho
-1. O grupo deverá ser composto de até 4 alunos e cadastrado em [aqui](http://trabalhosacademicos.unip.br/entrega/).
-
-2. Todas as etapas do trabalho deverão ser escritas em **fonte ARIAL 12**, **espaçamento 1,5**, **margem direita 2,5 cm** e **margem esquerda 2,5 cm**. O trabalho deverá ter **formato A4**.
-
-3. Limites de páginas:
-  - **Objetivo do trabalho**: 1 página e no máximo 2 páginas
-  - **Introdução**: 2 páginas e no máximo 4 páginas
-  - **Regras e funcionamento do jogo (conceitos gerais)**: 4 páginas e no máximo 8 páginas.
-  - **Plano de desenvolvimento do jogo**: mínimo de 5 páginas e máximo de 15 páginas.
-  - **Projeto (estrutura) do programa**: mínimo de 3 páginas e máximo de 8 páginas.
-  - **Relatório com as linhas de código**: máximo de 10 páginas.
-
-4. O trabalho, junto com a ficha padrão de *“Atividades Práticas Supervisionadas”*, de cada integrante do grupo, ilustrando cronologicamente cada um dos itens, segundo a orientação do professor supervisor desta atividade, deverá ser postado [aqui](http://trabalhosacademicos.unip.br/entrega/).
-
-5. Estrutura do trabalho:
-
-  1. Capa: identificando o curso, o tema, a relação de alunos do grupo (nome/RA)
-  2. Índice
-  3. Objetivo e motivação do trabalho
-  4. Introdução
-  5. Regras do jogo (conceitos gerais)
-  6. Plano de desenvolvimento do jogo (elementos e ferramentas que serão utilizadas)
-  7. Projeto (estrutura e módulos que serão desenvolvidos) do programa
-  8. Relatório com as linhas de código do programa
-  9. Apresentação do programa em funcionamento em um computador, apresentando todas as funcionalidades pedidas e extras.
-  10. Bibliografia
-  11. Ficha de Atividades Práticas Supervisionadas
-
-## Modelo de ficha de atividades práticas supervisionadas
-O modelo está dentro do aquivo original, pode ser encontrado [aqui](https://github.com/ciencia-computacao-unip/APS_4/blob/master/APS%20-%203o%20e%204o%20CC%20-%20ago-2015.docx).
+## O Que Deve Ser Implementado?
+O brinquedo Genius, com seus 3 tipos de jogos e 4 níveis de dificuldade.
+- [ ] Os elementos devem ser minimamente animados;
+- [ ] A janela do jogo não poderá ser redimensionada;
+- [ ] Deve ser criado um “módulo de pânico”
+  - [ ] Caso o usuário coloque o mouse no canto inferior direito da janela, toda a interface do jogo deve ser substituída por um disfarce;
+  - [ ] Para retornar ao jogo, o usuário deve clicar em uma parte específica da janela.
+- [ ] O jogo deverá ser jogado também através do teclado;
+- [ ] Há total liberdade quanto ao desenho da interface, no entanto, deve ser utilizado o maior número de componentes gráficos (AWT/Swing) quanto possível (pelo menos oito)
+- [ ] A não utilização de bom número de componentes acarretará em diminuição da nota.
+- [ ] Também deverá ser criada uma base de dados com dados estatísticos das jogadas, como número de tentativas realizadas, número de tentativas assertivas, e número de tentativas não assertivas;
+  - [ ] Deve permitir o usuário consultar as estatísticas armazenadas, por usuário, tipo de jogo e nível de dificuldade;
+- [ ] No inicio do jogo deve ser solicitado um nome/apelido do usuário que irá jogar.
+- [ ] Devem ser utilizadas classes interna e / ou interna anônima.
+- [ ] O sistema deve ser constituído de pelo menos 03 classes públicas concretas.
+- [ ] Deverá ser entregue uma documentação nos moldes da APS.
+- [ ] O grupo deverá ser composto no formato da APS, no máximo quatro alunos.
