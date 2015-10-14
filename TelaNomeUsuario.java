@@ -32,7 +32,9 @@ public class TelaNomeUsuario extends JFrame implements ActionListener{
 
   public void actionPerformed(ActionEvent evento){
     if(evento.getSource() == botaoEnviar){
-      System.out.print("oi!");
+      new MenuPrincipal();
+      this.setVisible(false);
+      this.dispose();
     }
   }
 
