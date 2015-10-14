@@ -29,6 +29,10 @@ public class Ranking extends JFrame{
   public Ranking(){
 
   super("Ranking");
+  this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+  this.setSize(220,400);
+  this.setVisible(true);
+  this.setLayout(new BorderLayout());
 
   tabela = new JTable(dados, colunas);
 
@@ -45,25 +49,18 @@ public class Ranking extends JFrame{
   modos.addTab("Modo 3", modo3);
 
   modo1flow.setLayout(new FlowLayout());
-  p1fundo.setLayout(new BorderLayout());
-  p1fundo.add(tabela, BorderLayout.CENTER);
-  p1fundo.add(voltar, BorderLayout.SOUTH);
-  p1fundo.add(modo1flow, BorderLayout.NORTH);
+  this.setLayout(new BorderLayout());
+  this.add(tabela, BorderLayout.CENTER);
+  this.add(voltar, BorderLayout.SOUTH);
+  this.add(modo1flow, BorderLayout.NORTH);
 
   modo1flow.add(pontuacao);
   modo1flow.add(jogador);
   modo1.add(p1fundo);
 
-  Container janela;
-  janela = getContentPane();
-  janela.setLayout(new BorderLayout());
-
-  janela.add(modos);
   }
   public static void main(String[]args){
     Ranking r = new Ranking();
     r.setVisible(true);
-    r.pack();
-    r.setDefaultCloseOperation(EXIT_ON_CLOSE);
   }
 }
