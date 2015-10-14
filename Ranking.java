@@ -28,10 +28,11 @@ public class Ranking extends JFrame{
 
   public Ranking(){
 
-  super("Ranking");
+  super("GENIUS - Ranking");
   this.setDefaultCloseOperation(EXIT_ON_CLOSE);
   this.setSize(220,400);
   this.setVisible(true);
+  this.setResizable(false);
   this.setLayout(new BorderLayout());
 
   tabela = new JTable(dados, colunas);
