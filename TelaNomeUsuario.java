@@ -1,10 +1,14 @@
-import javax.swing.JFrame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import java.awt.FlowLayout;
+
+import javax.swing.JFrame;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 
-public class TelaNomeUsuario extends JFrame{
+public class TelaNomeUsuario extends JFrame implements ActionListener{
   private static final long serialVersionUID = 1L;
 
   public TelaNomeUsuario (){
@@ -22,5 +26,13 @@ public class TelaNomeUsuario extends JFrame{
     this.add(campoNome);
     this.add(enviar);
 
+    enviar.addActionListener(this);
+
   }
+
+  public void actionPerformed(ActionEvent evento){
+      System.out.print("oi!");
+  }
+
+
 }
