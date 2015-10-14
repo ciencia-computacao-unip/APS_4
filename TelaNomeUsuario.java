@@ -20,7 +20,8 @@ public class TelaNomeUsuario extends JFrame implements ActionListener{
     this.setSize(400,100);
     this.setVisible(true);
     this.setLayout(new FlowLayout());
-    setDefaultCloseOperation(EXIT_ON_CLOSE);
+    this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+    this.setResizable(false);
 
     this.add(labelCampoNome);
     this.add(campoNome);
