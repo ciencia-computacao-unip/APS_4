@@ -11,6 +11,10 @@ import javax.swing.JLabel;
 public class TelaNomeUsuario extends JFrame implements ActionListener{
   private static final long serialVersionUID = 1L;
 
+  private JButton botaoEnviar = new JButton("Enviar");
+  private JTextField campoNome = new JTextField(20);
+  private JLabel labelCampoNome = new JLabel("Nome:");
+
   public TelaNomeUsuario (){
     super("Genius - Login");
     this.setSize(400,100);
@@ -18,20 +22,18 @@ public class TelaNomeUsuario extends JFrame implements ActionListener{
     this.setLayout(new FlowLayout());
     setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-    JButton enviar = new JButton("Enviar");
-    JTextField campoNome = new JTextField(20);
-    JLabel labelCampoNome = new JLabel("Nome:");
-
     this.add(labelCampoNome);
     this.add(campoNome);
-    this.add(enviar);
+    this.add(botaoEnviar);
 
-    enviar.addActionListener(this);
+    botaoEnviar.addActionListener(this);
 
   }
 
   public void actionPerformed(ActionEvent evento){
+    if(evento.getSource() == botaoEnviar){
       System.out.print("oi!");
+    }
   }
 
 
