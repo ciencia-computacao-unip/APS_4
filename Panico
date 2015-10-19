@@ -154,6 +154,7 @@ public class Panico extends JFrame implements ActionListener {
 			}
 		}if (e.getSource()== jb_sair){
 			new Menu();
+			frame.dispose();
 		}
 
 	}
