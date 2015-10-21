@@ -59,11 +59,17 @@ public class MenuDificuldade extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e){
 	
 		if (e.getSource()== Botao[1]){
-			
+			new Jogo();	
+			frame.dispose();			
 		}if (e.getSource()== Botao[2]){
-			
+			new Jogo();
+			frame.dispose();
 		}if (e.getSource()== Botao[3]){
-			
+			new Jogo();
+			frame.dispose();
+		}if (e.getSource()== Botao[4]){
+			new Jogo();
+			frame.dispose();
 		}
 	}
 }	
