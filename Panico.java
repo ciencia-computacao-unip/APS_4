@@ -9,6 +9,8 @@ import java.io.*;
 import java.io.FileWriter;
 import java.io.File;
 import java.io.IOException;
+import java.awt.event.MouseEvent;  
+import java.awt.event.MouseListener;
 
 
 
@@ -39,9 +41,9 @@ public class Panico extends JFrame implements ActionListener {
 		frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
 		frame.setLocation(0,0);
 		frame.setSize(1200,700);
-		frame.setResizable(true);
+		frame.setResizable(false);
 		frame.setVisible(true);
-		//frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+		frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
 		//LAYOUTS
 
@@ -124,7 +126,10 @@ public class Panico extends JFrame implements ActionListener {
 		jb_internet.addActionListener(this);
 
 
+		
 	}
+	
+	
 
 	public void actionPerformed(ActionEvent e){
 		if (e.getSource()== jb_salvar){
@@ -155,6 +160,7 @@ public class Panico extends JFrame implements ActionListener {
 		}if (e.getSource()== jb_sair){
 			new Menu();
 			frame.dispose();
+			
 		}
 
 	}
@@ -162,6 +168,6 @@ public class Panico extends JFrame implements ActionListener {
 	public static void main(String[] args) {
 
 	new Panico();
-
+	
 	}
 }
