@@ -67,61 +67,6 @@ public class Menu extends JFrame implements ActionListener {
 
 
 
-		//LATERAL
-
-		for(int x=7;x<11;x++){
-			Botao[x]= new Botao();
-			Botao[x].setEnabled(false);
-			jp_lateral.add(Botao[x]);
-			//Botao[x].addActionListener(this);
-		}
-
-		Botao[10].setBackground(Color.CYAN);
-		Botao[9].setBackground(Color.WHITE);
-		Botao[7].setBackground(Color.MAGENTA);
-		Botao[8].setBackground(Color.BLACK);
-
-
-
-
-		Botao[8].addMouseListener(new MouseListener() {
-
-			public void mouseReleased(MouseEvent e) {
-			}
-
-			public void mousePressed(MouseEvent e) {
-			}
-
-			public void mouseExited(MouseEvent e) {
-			}
-
-			public void mouseEntered(MouseEvent e) {
-				frame.dispose();
-				new Panico();
-			}
-
-			public void mouseClicked(MouseEvent e) {
-			}
-		});
-
-
-		//LATERAL2
-
-
-
-
-		for(int x=11;x<15;x++){
-			Botao[x]= new Botao();
-			Botao[x].setEnabled(false);
-			jp_lateral2.add(Botao[x]);
-			//Botao[x].addActionListener(this);
-		}
-
-		Botao[14].setBackground(Color.GREEN);
-		Botao[12].setBackground(Color.RED);
-		Botao[11].setBackground(Color.YELLOW);
-		Botao[13].setBackground(Color.BLUE);
-
 
 
 		//CENTERTOP
@@ -145,38 +90,32 @@ public class Menu extends JFrame implements ActionListener {
 		Botao[4].setText("OPCOES");
 		Botao[6].setText("SAIR");
 
-
-
-
-
 		//-----------------
 		//RODAPE
-
 		jl_rodape = new JLabel ("Jogo criado pelos alunos de Ciencias da Computacao - UNIP 2015");
 		jp_total.add(jl_rodape,BorderLayout.SOUTH);
 		jl_rodape.setHorizontalAlignment(SwingConstants.CENTER);
-
-
-
 	}
 
 
 	public void actionPerformed(ActionEvent e){
-
-		if (e.getSource()== Botao[1]){
-			new Jogo();
-		}if (e.getSource()== Botao[3]){
-			new MenuDificuldade();
-		}if (e.getSource()== Botao[5]){
-			new Jogo();
-		}if (e.getSource()== Botao[6]){
-			System.exit(0);
-		}if (e.getSource()== Botao[4]){
-			new Opcoes();
-			frame.dispose();
-		}if (e.getSource()== Botao[2]){
-			new Ranking();
-			frame.dispose();
-		}
+			for(int x = 0; x<=6; x++){
+					if(e.getSource()== Botao[x]){
+							switch(x){
+									case 1:
+											new Jogo();break;
+									case 2:
+											new Ranking();frame.dispose();break;
+									case 3:
+											new MenuDificuldade();break;
+									case 4:
+											new Opcoes();frame.dispose();break;
+									case 5:
+											new Jogo();break;
+									default:
+											System.exit(0);
+							}
+					}
+			}
 	}
 }
