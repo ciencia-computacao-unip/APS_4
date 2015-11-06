@@ -17,23 +17,19 @@ import javax.swing.border.LineBorder;
 
 public class Menu extends JFrame implements ActionListener {
 
+
 	// DECLARANDO VARIAVEIS;
 	private static final long serialVersionUID = 1L;
 	private JPanel jp_total,jp_center,jp_lateral,jp_lateral2,jp_top;
 	private JLabel jl_nome,jl_rodape;
 	private Botao[] Botao = new Botao[20];
-
-
 	public JFrame frame = new JFrame("Menu");
-
-
 
 
 	//MTD. CONSTRUTOR;
 	public Menu(){
 
 		super("Tela Menu");
-
 
 		//Setando configs da janela
 		frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -45,18 +41,14 @@ public class Menu extends JFrame implements ActionListener {
 		//Layouts
 		jp_total = new JPanel(new BorderLayout());
 		jp_center = new JPanel(new FlowLayout());
-		jp_lateral = new JPanel(new GridLayout(4,1));
-		jp_lateral2 = new JPanel(new GridLayout(4,1));
 		jp_top = new JPanel(new FlowLayout());
-
+		jl_rodape = new JLabel ("Jogo criado pelos alunos de Ciencias da Computacao - UNIP 2015");
 
 		//ADDS
 		frame.add(jp_total);
 		jp_total.add(jp_center,BorderLayout.CENTER);
-		jp_total.add(jp_lateral,BorderLayout.EAST);
-		jp_total.add(jp_lateral2,BorderLayout.WEST);
 		jp_total.add(jp_top,BorderLayout.NORTH);
-
+		jp_total.add(jl_rodape,BorderLayout.SOUTH);
 
 		//NORTH
 		jl_nome = new JLabel ("GENIUS   DOS   DESENVOLVEDORES");
@@ -64,23 +56,13 @@ public class Menu extends JFrame implements ActionListener {
 		jp_top.add(jl_nome);
 		jl_nome.setHorizontalAlignment(SwingConstants.CENTER);
 
-
-
-
-
-
 		//CENTERTOP
-
-
 		for(int x=1;x<7;x++){
 			Botao[x]= new Botao();
 			Botao[x].setBorder(new LineBorder(Color.BLACK, 5));
 			Botao[x].setPreferredSize(new Dimension(200, 80));
 			jp_center.add(Botao[x]);
 			Botao[x].addActionListener(this);
-
-
-
 		}
 
 		Botao[1].setText("MODO JOGO 1");
@@ -90,13 +72,9 @@ public class Menu extends JFrame implements ActionListener {
 		Botao[4].setText("OPCOES");
 		Botao[6].setText("SAIR");
 
-		//-----------------
 		//RODAPE
-		jl_rodape = new JLabel ("Jogo criado pelos alunos de Ciencias da Computacao - UNIP 2015");
-		jp_total.add(jl_rodape,BorderLayout.SOUTH);
 		jl_rodape.setHorizontalAlignment(SwingConstants.CENTER);
 	}
-
 
 	public void actionPerformed(ActionEvent e){
 			for(int x = 0; x<=6; x++){
