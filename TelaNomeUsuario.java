@@ -18,6 +18,7 @@ public class TelaNomeUsuario extends JFrame implements ActionListener{
   public TelaNomeUsuario (){
     super("Genius - Login");
     this.setSize(400,100);
+	this.setLocation(100,100);
     this.setVisible(true);
     this.setLayout(new FlowLayout());
     this.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -28,14 +29,15 @@ public class TelaNomeUsuario extends JFrame implements ActionListener{
     this.add(botaoEnviar);
 
     botaoEnviar.addActionListener(this);
+	
+	this.getRootPane().setDefaultButton(botaoEnviar);
 
   }
 
   public void actionPerformed(ActionEvent evento){
     if(evento.getSource() == botaoEnviar){
-      Main.nomeUsuario = campoNome.getText();
-      new MenuPrincipal();
-      this.setVisible(false);
+      //Main.nomeUsuario = campoNome.getText();
+      new Menu();
       this.dispose();
     }
   }
