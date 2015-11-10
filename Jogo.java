@@ -15,7 +15,7 @@ public class Jogo extends JFrame implements ActionListener {
 	// DECLARANDO VARIAVEIS;
 	private static final long serialVersionUID = 1L;
 	private JPanel jp_total,jp_center,jp_east,jp_north,jp_south,jp_west;
-	private Botao[] botoes = new Botao[20];
+	private BotaoJogo[] botoes = new BotaoJogo[20];
 	public int daltonico;
 
 
@@ -59,7 +59,7 @@ public class Jogo extends JFrame implements ActionListener {
 		//JOGO
 
 		for(int x=1;x<5;x++){
-			botoes[x]= new Botao();
+			botoes[x]= new BotaoJogo();
 			jp_center.add(botoes[x]);
 			botoes[x].addActionListener(this);
 
@@ -68,7 +68,7 @@ public class Jogo extends JFrame implements ActionListener {
 		//MENU
 		for(int x=5;x<7;x++){
 
-			botoes[x]= new Botao();
+			botoes[x]= new BotaoJogo();
 			botoes[x].addActionListener(this);
 			jp_south.add(botoes[x]);
 			botoes[x].setPreferredSize(new Dimension(200, 80));

@@ -2,9 +2,9 @@ import javax.swing.JButton;
 import java.awt.Dimension;
 
 
-public class Botao extends JButton{
+public class BotaoJogo extends JButton{
 
-  public Botao(){
+  public BotaoJogo(){
     super();
     this.setPreferredSize( new Dimension(200, 80) );
   }

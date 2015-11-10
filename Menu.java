@@ -24,7 +24,7 @@ public class Menu extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	private JPanel jp_total,jp_center,jp_lateral,jp_lateral2,jp_top;
 	private JLabel jl_nome,jl_rodape;
-	private ArrayList<Botao> botao  = new ArrayList<Botao>();;
+	private ArrayList<BotaoMenu> botao  = new ArrayList<BotaoMenu>();
 	public JFrame frame = new JFrame("Menu");
 
 
@@ -60,7 +60,7 @@ public class Menu extends JFrame implements ActionListener {
 
 		//CENTERTOP
 		for(int x=0;x<6;x++){
-			botao.add( new Botao() );
+			botao.add( new BotaoMenu() );
 			jp_center.add( botao.get(x) );
 			botao.get(x).addActionListener(this);
 		}
