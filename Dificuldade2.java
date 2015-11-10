@@ -1,10 +1,10 @@
 import java.util.Random;
 public class Dificuldade2{
-	public static void main(String[] args) {
+	public Dificuldade2() {
 
 		int[] vetor2 = new int[14];
 		Random gerador = new Random();
-		
+
 		for (int i = 0; i < 14; i++) {
 			vetor2[i] = gerador.nextInt(5);
 			System.out.print(vetor2[i]);
