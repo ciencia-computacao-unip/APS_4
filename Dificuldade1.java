@@ -2,9 +2,8 @@ import java.util.Random;
 
 public class Dificuldade1 {
 
-	boolean teste;
-
 	public static void main(String[] args) {
+
 		int[] vetor1 = new int[8];
 		Random gerador = new Random();
 
@@ -15,7 +14,7 @@ public class Dificuldade1 {
 			for (int z = 0; z <= x ; z++) { //mostra os valores do vetor
 				System.out.print(vetor1[z]);
 				try{
-						Thread.sleep(500);                 //1000 = 1 segundo
+						Thread.sleep(500); //1000 = 1 segundo
 				}
 				catch(InterruptedException ex) {
 					Thread.currentThread().interrupt();

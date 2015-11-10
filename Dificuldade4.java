@@ -14,8 +14,8 @@ public class Dificuldade4 {
 			for (int i = 0; i < x; i++) { //mostra os valores do vetor
 				System.out.print(vetor4[i]);
 				try{
-						Thread.sleep(1000);                 //1000 = 1 segundo
-						}
+						Thread.sleep(1000); //1000 = 1 segundo
+				}
 				catch(InterruptedException ex) {
 					Thread.currentThread().interrupt();
 				}
