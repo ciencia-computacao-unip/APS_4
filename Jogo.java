@@ -45,15 +45,15 @@ public class Jogo extends JFrame implements ActionListener {
 
 		//BOTOES DO JOGO
 
-		Color[] Collor = new Color[10];
-		Collor[1] = Color.BLUE;
-		Collor[2] = Color.RED;
-		Collor[3] = Color.YELLOW;
-		Collor[4] = Color.GREEN;
-		Collor[5] = Color.BLACK;
-		Collor[6] = Color.CYAN;
-		Collor[7] = Color.MAGENTA;
-		Collor[8] = Color.WHITE;
+		Color[] cores = new Color[10];
+		cores[1] = Color.BLUE;
+		cores[2] = Color.RED;
+		cores[3] = Color.YELLOW;
+		cores[4] = Color.GREEN;
+		cores[5] = Color.BLACK;
+		cores[6] = Color.CYAN;
+		cores[7] = Color.MAGENTA;
+		cores[8] = Color.WHITE;
 
 
 		//JOGO
@@ -89,14 +89,14 @@ public class Jogo extends JFrame implements ActionListener {
 
 			for(int x=1;x<5;x++){
 
-				Color Col = Collor[x];
+				Color Col = cores[x];
 				botoes[x].setBorder(new LineBorder(Col, 10));
 				botoes[x].setBackground(Col);
 
 			}
 			for(int x=5;x<7;x++){
 
-				Color Col = Collor[x];
+				Color Col = cores[x];
 				botoes[x].setBackground(Color.BLACK);
 
 			}
@@ -110,14 +110,14 @@ public class Jogo extends JFrame implements ActionListener {
 
 			for(int x=1;x<5;x++){
 
-				Color Col = Collor[x+4];
+				Color Col = cores[x+4];
 				botoes[x].setBorder(new LineBorder(Col, 10));
 				botoes[x].setBackground(Col);
 
 			}
 			for(int x=5;x<7;x++){
 
-				Color Col = Collor[x];
+				Color Col = cores[x];
 				botoes[x].setBackground(Color.GRAY);
 
 			}
