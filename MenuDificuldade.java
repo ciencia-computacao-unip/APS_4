@@ -14,7 +14,7 @@ public class MenuDificuldade extends JFrame implements ActionListener {
 	// DECLARANDO VARIAVEIS;
 	private static final long serialVersionUID = 1L;
 	private JPanel jp_total;
-	private Botao[] Botao = new Botao[5];
+	private BotaoMenu[] botoes = new BotaoMenu[5];
 
 
 	public JFrame frame = new JFrame("Dificuldade");
@@ -37,18 +37,18 @@ public class MenuDificuldade extends JFrame implements ActionListener {
 		//Layouts
 
 		jp_total = new JPanel(new GridLayout(4,1,2,2));
-		for(int x=1;x<5;x++){ 
-			Botao[x]= new Botao();
-			Botao[x].setBorder(new LineBorder(Color.BLACK, 1));
-			jp_total.add(Botao[x]);
-			Botao[x].addActionListener(this);
+		for(int x=1;x<5;x++){
+			botoes[x]= new BotaoMenu();
+			botoes[x].setBorder(new LineBorder(Color.BLACK, 1));
+			jp_total.add(botoes[x]);
+			botoes[x].addActionListener(this);
 		}
 		frame.add(jp_total);
 
-		Botao[1].setText("8 SEQUENCIAS");
-		Botao[2].setText("14 SEQUENCIAS");
-		Botao[3].setText("20 SEQUENCIAS");
-		Botao[4].setText("31 SEQUENCIAS");
+		botoes[1].setText("8 SEQUENCIAS");
+		botoes[2].setText("14 SEQUENCIAS");
+		botoes[3].setText("20 SEQUENCIAS");
+		botoes[4].setText("31 SEQUENCIAS");
 
 
 
@@ -58,16 +58,16 @@ public class MenuDificuldade extends JFrame implements ActionListener {
 
 	public void actionPerformed(ActionEvent e){
 
-		if (e.getSource()== Botao[1]){
+		if (e.getSource()== botoes[1]){
 			new Jogo();
 			frame.dispose();
-		}if (e.getSource()== Botao[2]){
+		}if (e.getSource()== botoes[2]){
 			new Jogo();
 			frame.dispose();
-		}if (e.getSource()== Botao[3]){
+		}if (e.getSource()== botoes[3]){
 			new Jogo();
 			frame.dispose();
-		}if (e.getSource()== Botao[4]){
+		}if (e.getSource()== botoes[4]){
 			new Jogo();
 			frame.dispose();
 		}
