@@ -65,7 +65,7 @@ public class Menu extends JFrame implements ActionListener {
 			botao.get(x).addActionListener(this);
 		}
 
-		String[] menus = {"MODO JOGO 1", "MODO JOGO 2", "MODO JOGO 3", "RANKING", "OPCOES", "SAIR"};
+		String[] menus = {"MODO JOGO 1", "RANKING", "MODO JOGO 2", "OPCOES", "MODO JOGO 3", "SAIR"};
 
 		for( int x = 0; x < menus.length; x++ ){
 		    botao.get(x).setText(menus[x]);
