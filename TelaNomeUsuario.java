@@ -29,7 +29,7 @@ public class TelaNomeUsuario extends JFrame implements ActionListener{
     this.add(botaoEnviar);
 
     botaoEnviar.addActionListener(this);
-	
+
 	this.getRootPane().setDefaultButton(botaoEnviar);
 
   }
