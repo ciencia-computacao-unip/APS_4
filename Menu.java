@@ -8,12 +8,14 @@ import javax.swing.JPanel;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseEvent;
 import java.awt.Font;
-import java.awt.Dimension;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
+import java.util.List;
+import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Menu extends JFrame implements ActionListener {
 
@@ -22,7 +24,7 @@ public class Menu extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	private JPanel jp_total,jp_center,jp_lateral,jp_lateral2,jp_top;
 	private JLabel jl_nome,jl_rodape;
-	private Botao[] Botao = new Botao[20];
+	private ArrayList<Botao> botao  = new ArrayList<Botao>();;
 	public JFrame frame = new JFrame("Menu");
 
 
@@ -51,49 +53,47 @@ public class Menu extends JFrame implements ActionListener {
 		jp_total.add(jl_rodape,BorderLayout.SOUTH);
 
 		//NORTH
-		jl_nome = new JLabel ("GENIUS   DOS   DESENVOLVEDORES");
-		jl_nome.setFont(new Font("Dialog", Font.BOLD, 20));
+		jl_nome = new JLabel("GENIUS DOS DESENVOLVEDORES");
+		jl_nome.setFont( new Font("Dialog", Font.BOLD, 20) );
 		jp_top.add(jl_nome);
 		jl_nome.setHorizontalAlignment(SwingConstants.CENTER);
 
 		//CENTERTOP
-		for(int x=1;x<7;x++){
-			Botao[x]= new Botao();
-			Botao[x].setBorder(new LineBorder(Color.BLACK, 5));
-			Botao[x].setPreferredSize(new Dimension(200, 80));
-			jp_center.add(Botao[x]);
-			Botao[x].addActionListener(this);
+		for(int x=0;x<6;x++){
+			botao.add( new Botao() );
+			jp_center.add( botao.get(x) );
+			botao.get(x).addActionListener(this);
 		}
 
-		Botao[1].setText("MODO JOGO 1");
-		Botao[3].setText("MODO JOGO 2");
-		Botao[5].setText("MODO JOGO 3");
-		Botao[2].setText("RANKING");
-		Botao[4].setText("OPCOES");
-		Botao[6].setText("SAIR");
+		String[] menus = {"MODO JOGO 1", "MODO JOGO 2", "MODO JOGO 3", "RANKING", "OPCOES", "SAIR"};
+
+		for( int x = 0; x < menus.length; x++ ){
+		    botao.get(x).setText(menus[x]);
+		}
 
 		//RODAPE
 		jl_rodape.setHorizontalAlignment(SwingConstants.CENTER);
 	}
 
 	public void actionPerformed(ActionEvent e){
-			for(int x = 0; x<=6; x++){
-					if(e.getSource()== Botao[x]){
-							switch(x){
-									case 1:
-											new Jogo();break;
-									case 2:
-											new Ranking();frame.dispose();break;
-									case 3:
-											new MenuDificuldade();break;
-									case 4:
-											new Opcoes();frame.dispose();break;
-									case 5:
-											new Jogo();break;
-									default:
-											System.exit(0);
-							}
-					}
+		for(int x = 0; x<=5; x++){
+			if(e.getSource()== botao.get(x)){
+				switch(x){
+					case 0:
+						new Jogo();break;
+					case 1:
+						new Ranking();frame.dispose();break;
+					case 2:
+						new MenuDificuldade();break;
+					case 3:
+						new Opcoes();frame.dispose();break;
+					case 4:
+						new Jogo();break;
+					default:
+						System.exit(0);
+				}
 			}
+		}
 	}
+
 }
