@@ -1,8 +1,8 @@
 import java.util.Random;
 
 public class Dificuldade3 {
-	
-	public static void main(String[] args) {
+
+	public  Dificuldade3() {
 
 		int[] vetor3 = new int[20];
 		Random gerador = new Random();

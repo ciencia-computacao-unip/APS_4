@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class Dificuldade1 {
 
-	public static void main(String[] args) {
+	public  Dificuldade1() {
 
 		int[] vetor1 = new int[8];
 		Random gerador = new Random();
