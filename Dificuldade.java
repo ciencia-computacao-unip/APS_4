@@ -15,12 +15,4 @@ public class Dificuldade {
 		}
 		return numerosAleatorios;
 	}
-
-	public static void main(String[] args){
-		ArrayList<Integer> testeDificuldade1 = ObterBotoesASeremPrecionados(2);
-		for( int numero : testeDificuldade1 ){
-      System.out.println(numero);
-		}
-	}
-
 }
