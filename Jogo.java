@@ -29,8 +29,14 @@ public class Jogo extends JFrame implements ActionListener {
 
 		//Setando configs da janela
 		Dimension tamanhoDaTela = Toolkit.getDefaultToolkit().getScreenSize();
-
-		frame.setBounds(0,0,tamanhoDaTela.width, tamanhoDaTela.height);
+		double porcentagemDaTelaAOcupar = 0.75;
+		System.out.println(porcentagemDaTelaAOcupar);
+		frame.setBounds(
+			(int)(tamanhoDaTela.width - tamanhoDaTela.width*porcentagemDaTelaAOcupar)/2,
+			(int)(tamanhoDaTela.height - tamanhoDaTela.height*porcentagemDaTelaAOcupar)/2,
+			(int)(tamanhoDaTela.width*porcentagemDaTelaAOcupar),
+			(int)(tamanhoDaTela.height*porcentagemDaTelaAOcupar)
+		);
 		frame.setResizable(false);
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
