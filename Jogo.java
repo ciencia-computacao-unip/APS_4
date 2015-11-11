@@ -67,12 +67,10 @@ public class Jogo extends JFrame implements ActionListener {
 		String[] textosBotoes = {"JOGAR","VOLTAR"};
 		for(int x=0;x<=1;x++){
 
-			botoesDeMenu[x]= new BotaoMenu();
-			botoesDeMenu[x].addActionListener(this);
+			botoesDeMenu[x]= new BotaoMenu(textosBotoes[x]);
 			jp_south.add(botoesDeMenu[x]);
-			botoesDeMenu[x].setPreferredSize(new Dimension(200, 80));
+			botoesDeMenu[x].addActionListener(this);
 			botoesDeMenu[x].setForeground(Color.WHITE);
-			botoesDeMenu[x].setText(textosBotoes[x]);
 		}
 
 		if(daltonico==0){

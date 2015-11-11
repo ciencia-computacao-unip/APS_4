@@ -37,20 +37,15 @@ public class MenuDificuldade extends JFrame implements ActionListener {
 		//Layouts
 
 		jp_total = new JPanel(new GridLayout(4,1,2,2));
+
+		String[] textosBotoes = {"8 SEQUENCIAS", "14 SEQUENCIAS", "20 SEQUENCIAS", "31 SEQUENCIAS"};
 		for(int x=1;x<5;x++){
-			botoes[x]= new BotaoMenu();
+			botoes[x]= new BotaoMenu(textosBotoes[x-1]);
 			botoes[x].setBorder(new LineBorder(Color.BLACK, 1));
 			jp_total.add(botoes[x]);
 			botoes[x].addActionListener(this);
 		}
 		frame.add(jp_total);
-
-		botoes[1].setText("8 SEQUENCIAS");
-		botoes[2].setText("14 SEQUENCIAS");
-		botoes[3].setText("20 SEQUENCIAS");
-		botoes[4].setText("31 SEQUENCIAS");
-
-
 
 
 	}
