@@ -7,7 +7,7 @@ import javax.swing.event.*;
 import java.io.*;
 import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
-
+import java.awt.Dimension;
 
 
 public class Jogo extends JFrame implements ActionListener {
@@ -28,12 +28,12 @@ public class Jogo extends JFrame implements ActionListener {
 		super("Jogo");
 
 		//Setando configs da janela
-		frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		frame.setLocation(0,0);
-		frame.setSize(200,180);
+		Dimension tamanhoDaTela = Toolkit.getDefaultToolkit().getScreenSize();
+
+		frame.setBounds(0,0,tamanhoDaTela.width, tamanhoDaTela.height);
 		frame.setResizable(false);
 		frame.setVisible(true);
-		frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+		frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
 		//Layouts
 		jp_total = new JPanel(new BorderLayout());
