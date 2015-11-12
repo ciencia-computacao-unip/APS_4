@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 public class TelaNomeUsuario extends JFrame implements ActionListener{
   private static final long serialVersionUID = 1L;
@@ -41,7 +42,7 @@ public class TelaNomeUsuario extends JFrame implements ActionListener{
         new Menu();
         this.dispose();
       }else{
-        //inserir algum aviso ao usuário!
+        JOptionPane.showMessageDialog(null,"Digite um nome de usuario");
       }
     }
   }
