@@ -59,16 +59,13 @@ public class Menu extends JFrame implements ActionListener {
 		jl_nome.setHorizontalAlignment(SwingConstants.CENTER);
 
 		//CENTERTOP
-		for(int x=0;x<6;x++){
-			botao.add( new BotaoMenu() );
-			jp_center.add( botao.get(x) );
-			botao.get(x).addActionListener(this);
-		}
-
 		String[] menus = {"MODO JOGO 1", "RANKING", "MODO JOGO 2", "OPCOES", "MODO JOGO 3", "SAIR"};
 
 		for( int x = 0; x < menus.length; x++ ){
-		    botao.get(x).setText(menus[x]);
+				botao.add( new BotaoMenu(menus[x]));
+				jp_center.add( botao.get(x) );
+				botao.get(x).addActionListener(this);
+				this.setForeground(Color.WHITE);
 		}
 
 		//RODAPE

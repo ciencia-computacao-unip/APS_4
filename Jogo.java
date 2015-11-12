@@ -15,7 +15,8 @@ public class Jogo extends JFrame implements ActionListener {
 	// DECLARANDO VARIAVEIS;
 	private static final long serialVersionUID = 1L;
 	private JPanel jp_total,jp_center,jp_east,jp_north,jp_south,jp_west;
-	private BotaoJogo[] botoes = new BotaoJogo[20];
+	private BotaoJogo[] botoesDeJogo = new BotaoJogo[4];
+	private BotaoMenu[] botoesDeMenu = new BotaoMenu[2];
 	public int daltonico;
 
 
@@ -30,7 +31,6 @@ public class Jogo extends JFrame implements ActionListener {
 		//Setando configs da janela
 		Dimension tamanhoDaTela = Toolkit.getDefaultToolkit().getScreenSize();
 		double porcentagemDaTelaAOcupar = 0.75;
-		System.out.println(porcentagemDaTelaAOcupar);
 		frame.setBounds(
 			(int)(tamanhoDaTela.width - tamanhoDaTela.width*porcentagemDaTelaAOcupar)/2,
 			(int)(tamanhoDaTela.height - tamanhoDaTela.height*porcentagemDaTelaAOcupar)/2,
@@ -51,40 +51,27 @@ public class Jogo extends JFrame implements ActionListener {
 
 		//BOTOES DO JOGO
 
-		Color[] cores = new Color[10];
-		cores[1] = Color.BLUE;
-		cores[2] = Color.RED;
-		cores[3] = Color.YELLOW;
-		cores[4] = Color.GREEN;
-		cores[5] = Color.BLACK;
-		cores[6] = Color.CYAN;
-		cores[7] = Color.MAGENTA;
-		cores[8] = Color.WHITE;
+		Color[] cores = {null,Color.BLUE,Color.RED,Color.YELLOW,Color.GREEN,Color.BLACK,Color.CYAN,Color.MAGENTA,Color.WHITE};
 
 
 		//JOGO
 
-		for(int x=1;x<5;x++){
-			botoes[x]= new BotaoJogo();
-			jp_center.add(botoes[x]);
-			botoes[x].addActionListener(this);
+		for(int x=1;x<=4;x++){
+			botoesDeJogo[x-1]= new BotaoJogo(x,false);
+			jp_center.add(botoesDeJogo[x-1]);
+			botoesDeJogo[x-1].addActionListener(this);
 
 		}
 
 		//MENU
-		for(int x=5;x<7;x++){
+		String[] textosBotoes = {"JOGAR","VOLTAR"};
+		for(int x=0;x<=1;x++){
 
-			botoes[x]= new BotaoJogo();
-			botoes[x].addActionListener(this);
-			jp_south.add(botoes[x]);
-			botoes[x].setPreferredSize(new Dimension(200, 80));
-			botoes[x].setBorder(new LineBorder(Color.WHITE, 3));
-			botoes[x].setForeground(Color.WHITE);
-
+			botoesDeMenu[x]= new BotaoMenu(textosBotoes[x]);
+			jp_south.add(botoesDeMenu[x]);
+			botoesDeMenu[x].addActionListener(this);
+			botoesDeMenu[x].setForeground(Color.WHITE);
 		}
-
-		botoes[5].setText("JOGAR");
-		botoes[6].setText("VOLTAR");
 
 		if(daltonico==0){
 
@@ -93,18 +80,14 @@ public class Jogo extends JFrame implements ActionListener {
 			jp_east.setBackground(Color.BLACK);
 			jp_west.setBackground(Color.BLACK);
 
-			for(int x=1;x<5;x++){
+			for(int x=1;x<=4;x++){
 
 				Color Col = cores[x];
-				botoes[x].setBorder(new LineBorder(Col, 10));
-				botoes[x].setBackground(Col);
+				botoesDeJogo[x-1].setBorder(new LineBorder(Col, 10));
 
 			}
-			for(int x=5;x<7;x++){
-
-				Color Col = cores[x];
-				botoes[x].setBackground(Color.BLACK);
-
+			for(int x=0;x<=1;x++){
+				botoesDeMenu[x].setBackground(Color.BLACK);
 			}
 
 		}else{
@@ -117,15 +100,12 @@ public class Jogo extends JFrame implements ActionListener {
 			for(int x=1;x<5;x++){
 
 				Color Col = cores[x+4];
-				botoes[x].setBorder(new LineBorder(Col, 10));
-				botoes[x].setBackground(Col);
+				botoesDeJogo[x].setBorder(new LineBorder(Col, 10));
+				botoesDeJogo[x].setBackground(Col);
 
 			}
-			for(int x=5;x<7;x++){
-
-				Color Col = cores[x];
-				botoes[x].setBackground(Color.GRAY);
-
+			for(int x=0;x<=1;x++){
+				botoesDeMenu[x].setBackground(Color.GRAY);
 			}
 
 		}
@@ -146,7 +126,7 @@ public class Jogo extends JFrame implements ActionListener {
 	}
 
 	public void actionPerformed(ActionEvent e){
-		if (e.getSource()== botoes[6]){
+		if (e.getSource()== botoesDeMenu[1]){
 			frame.dispose();
 		}
 	}
