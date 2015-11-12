@@ -161,6 +161,7 @@ public class TelaDeOpcoes extends JFrame implements ActionListener {
 		Menu menu = new Menu ();
 	}if (e.getSource()== Botao){
 		jl_nome.setText("NOME DO JOGADOR : " + tf_nome.getText());
+		Configuracoes.nomeUsuario = tf_nome.getText();
 	}if (e.getSource()== radon_vol){
 		jp_volslider.setVisible(true);
 	}if (e.getSource()== radoff_vol){
