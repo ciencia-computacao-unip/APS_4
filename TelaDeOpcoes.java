@@ -16,7 +16,7 @@ public class TelaDeOpcoes extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	private JPanel jp_total,jp_save,jp_quadrantes,jp_daltonismo,jp_volume,jp_volslider,jp_nome;
 	private JLabel jl_daltonismo,jl_volume,jl_volslider,jl_nome,jl_opcoes,jl_status;
-	private JTextField tf_nome;
+	private JTextField tf_nome = new JTextField(Configuracoes.nomeUsuario);
 	private JSlider slider;
 	private JRadioButton radon_dal,radoff_dal,radon_vol,radoff_vol;
 	private ButtonGroup group_dalt,group_vol;
@@ -69,7 +69,6 @@ public class TelaDeOpcoes extends JFrame implements ActionListener {
 		Botao.setText("ALTERAR NOME");
 		jl_nome = new JLabel("NOME DO JOGADOR : ");
 		jl_nome.setHorizontalAlignment(SwingConstants.CENTER);
-		tf_nome = new JTextField("");
 		jp_nome.add(jl_nome);
 		jp_nome.add(tf_nome);
 		jp_nome.add(Botao);
