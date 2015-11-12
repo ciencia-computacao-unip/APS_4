@@ -83,7 +83,7 @@ public class Menu extends JFrame implements ActionListener {
 					case 2:
 						new MenuDificuldade();break;
 					case 3:
-						new Opcoes();frame.dispose();break;
+						new TelaDeOpcoes();frame.dispose();break;
 					case 4:
 						new Jogo();break;
 					default:
