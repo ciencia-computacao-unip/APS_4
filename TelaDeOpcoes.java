@@ -67,7 +67,7 @@ public class TelaDeOpcoes extends JFrame implements ActionListener {
 
 		Botao = new JButton();
 		Botao.setText("ALTERAR NOME");
-		jl_nome = new JLabel("NOME DO JOGADOR : ");
+		jl_nome = new JLabel("NOME DO JOGADOR : " + Configuracoes.nomeUsuario); //PEGA O NOME DIGITADO EM TelaNomeUsuario
 		jl_nome.setHorizontalAlignment(SwingConstants.CENTER);
 		jp_nome.add(jl_nome);
 		jp_nome.add(tf_nome);
