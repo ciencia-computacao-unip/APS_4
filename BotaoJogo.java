@@ -23,11 +23,13 @@ public class BotaoJogo extends JButton{
     Color cor;
     if(!modoDaltonico){
       cor = cores[numeroBotao-1];
+	  this.setBorder(new LineBorder(cor, 10));
     }else{
       cor = coresDaltonico[numeroBotao-1];
+	  this.setBorder(new LineBorder(cor, 10));
     }
     this.setBackground(cor);
-    this.setBorder(new LineBorder(cor, 10));
+    
   }
 
 }
