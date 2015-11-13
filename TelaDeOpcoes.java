@@ -21,6 +21,7 @@ public class TelaDeOpcoes extends JFrame implements ActionListener {
 	private JRadioButton radon_dal,radoff_dal,radon_vol,radoff_vol;
 	private ButtonGroup group_dalt,group_vol;
 	private JButton Botao,Bot_save,Bot_cancel;
+	private boolean dOn,dOff,sOn,sOff;
 
 	JFrame frame = new JFrame("Opcoes");
 
@@ -60,6 +61,7 @@ public class TelaDeOpcoes extends JFrame implements ActionListener {
 		Bot_cancel = new JButton("CANCELAR");
 		Bot_save = new JButton("SALVAR E SAIR");
 		Bot_cancel.addActionListener(this);
+		Bot_save.addActionListener(this);
 
 
 
@@ -77,11 +79,20 @@ public class TelaDeOpcoes extends JFrame implements ActionListener {
 
 
 
+
 		//DALTONISMO
 
+	
+		if(Configuracoes.modoDaltonico==true){
+			dOn = true;
+			dOff = false;
+		}else{
+			dOn = false;
+			dOff = true;
+		}
 		jl_daltonismo = new JLabel(" MODO DALTONICO: ");
-   		radon_dal = new JRadioButton("LIGADO");
-        radoff_dal = new JRadioButton("DESLIGADO", true);
+   		radon_dal = new JRadioButton("LIGADO",dOn);
+        radoff_dal = new JRadioButton("DESLIGADO",dOff);
 
 
 		group_dalt = new ButtonGroup();
@@ -99,10 +110,18 @@ public class TelaDeOpcoes extends JFrame implements ActionListener {
 
 
 		//VOLUME
+		
+		if(Configuracoes.somNoJogo==true){
+			sOn = true;
+			sOff = false;
+		}else{
+			sOn = false;
+			sOff = true;
+		}
 
 		jl_volume = new JLabel(" SOM DO JOGO : ");
-		radon_vol = new JRadioButton("LIGADO", true);
-        radoff_vol = new JRadioButton("DESLIGADO");
+		radon_vol = new JRadioButton("LIGADO",sOn);
+        radoff_vol = new JRadioButton("DESLIGADO",sOff);
 
 
 		group_vol = new ButtonGroup();
@@ -135,6 +154,11 @@ public class TelaDeOpcoes extends JFrame implements ActionListener {
 			+ ((JSlider)e.getSource()).getValue());
 			}
 		});
+		if(sOn ==true){
+			jp_volslider.setVisible(true);
+		}else{
+			jp_volslider.setVisible(false);
+		}
 
 
 
@@ -166,6 +190,18 @@ public class TelaDeOpcoes extends JFrame implements ActionListener {
 		jp_volslider.setVisible(true);
 	}if (e.getSource()== radoff_vol){
 		jp_volslider.setVisible(false);
+	}if (e.getSource()== Bot_save){
+		if(radoff_vol.isSelected()){
+			Configuracoes.somNoJogo = true;
+		}if(radoff_vol.isSelected()){
+			Configuracoes.somNoJogo = false;
+		}if(radon_dal.isSelected()){
+			Configuracoes.modoDaltonico = true;
+		}if(radoff_dal.isSelected()){
+			Configuracoes.modoDaltonico = false;
+		}
+		frame.dispose();
+		Menu menu = new Menu ();
 	}
 
 	}
