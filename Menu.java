@@ -77,7 +77,7 @@ public class Menu extends JFrame implements ActionListener {
 			if(e.getSource()== botao.get(x)){
 				switch(x){
 					case 0:
-						new Jogo();break;
+						new TelaJogo();break;
 					case 1:
 						new Ranking();frame.dispose();break;
 					case 2:
@@ -85,7 +85,7 @@ public class Menu extends JFrame implements ActionListener {
 					case 3:
 						new TelaDeOpcoes();frame.dispose();break;
 					case 4:
-						new Jogo();break;
+						new TelaJogo();break;
 					default:
 						System.exit(0);
 				}
