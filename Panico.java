@@ -20,12 +20,11 @@ public class Panico extends JFrame implements ActionListener {
 
 	// DECLARANDO VARIAVEIS;
 	private static final long serialVersionUID = 1L;
-	private JPanel jp_total,jp_west,jp_westbt,jp_westbd;
+	private JPanel jp_total;
 	private JTextArea ta_loucura;
-	private JLabel jl_titulo,jl_logo,jl_anotacoes;
-	private JButton jb_salvar,jb_sair,jb_calc,jb_internet;
+	private JLabel jl_titulo;
+	private JButton jb_salvar,jb_sair;
 	private FileWriter arquivo;
-	private ImageIcon logo;
 
 
 	JFrame frame = new JFrame("Panico");
@@ -39,19 +38,21 @@ public class Panico extends JFrame implements ActionListener {
 
 		//Setando configs da janela
 		frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
-		frame.setLocation(0,0);
-		frame.setSize(1200,700);
-		frame.setResizable(false);
+		Dimension tamanhoDaTela = Toolkit.getDefaultToolkit().getScreenSize();
+		double porcentagemDaTelaAOcupar = 0.85;
+		frame.setBounds(
+			(int)(tamanhoDaTela.width - tamanhoDaTela.width*porcentagemDaTelaAOcupar)/2,
+			(int)(tamanhoDaTela.height - tamanhoDaTela.height*porcentagemDaTelaAOcupar)/2,
+			(int)(tamanhoDaTela.width*porcentagemDaTelaAOcupar),
+			(int)(tamanhoDaTela.height*porcentagemDaTelaAOcupar)
+		);
+		frame.setResizable(true);
 		frame.setVisible(true);
-		frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
 		//LAYOUTS
 
 
 		jp_total = new JPanel (new BorderLayout());
-		jp_west = new JPanel(new GridLayout(2,1));
-		jp_westbt = new JPanel(new FlowLayout());
-		jp_westbd = new JPanel(new BorderLayout());
 
 		//INSTANCIANDO
 		jl_titulo = new JLabel ("TRABALHO DE HISTORIA");
@@ -59,11 +60,8 @@ public class Panico extends JFrame implements ActionListener {
 
 	
 		ta_loucura = new JTextArea ("");
-		jl_logo = new JLabel();
-		jl_anotacoes = new JLabel("Quadro de Utilidades");
 		jb_salvar = new JButton("SALVAR");
 		jb_sair = new JButton();
-		logo = new ImageIcon(this.getClass().getResource("imagem.png"));
 
 
 		//CONFIGURACOES
@@ -72,7 +70,6 @@ public class Panico extends JFrame implements ActionListener {
 		jb_sair.setBorderPainted(false);
 		
 		ta_loucura.setWrapStyleWord(true);
-		jl_anotacoes.setFont(new Font("Dialog", Font.BOLD, 20));
 		ta_loucura.setFont(new Font("Dialog", Font.BOLD, 16));
 		jl_titulo.setFont(new Font("Dialog", Font.BOLD, 26));
 		ta_loucura.setLineWrap(true);
@@ -81,11 +78,6 @@ public class Panico extends JFrame implements ActionListener {
 		//CORES
 		
 		ta_loucura.setBackground(Color.WHITE);
-		jl_anotacoes.setBackground(Color.WHITE);
-		jl_logo.setBackground(Color.WHITE);
-		jp_westbt.setBackground(Color.WHITE);
-		jp_west.setBackground(Color.WHITE);
-		jp_westbd.setBackground(Color.WHITE);
 		jp_total.setBackground(Color.WHITE);
 		jl_titulo.setForeground(Color.BLUE);
 		jl_titulo.setBackground(Color.WHITE);
@@ -97,24 +89,14 @@ public class Panico extends JFrame implements ActionListener {
 		//ADDS
 
 		frame.add(jp_total);
-		jl_logo.setIcon(logo);
 		frame.add(jl_titulo,BorderLayout.NORTH);
 		jp_total.add(jb_salvar,BorderLayout.SOUTH);
-		jp_total.add(jp_west,BorderLayout.WEST);
-		jp_west.add(jl_logo);
-		jp_west.add(jp_westbd);
-		jp_westbd.add(jl_anotacoes,BorderLayout.NORTH);
-		jp_westbd.add(jp_westbt,BorderLayout.CENTER);
 		jp_total.add(jb_sair,BorderLayout.EAST);
 		jp_total.add(ta_loucura,BorderLayout.CENTER);
 		jl_titulo.setHorizontalAlignment(SwingConstants.CENTER);
-		jl_anotacoes.setHorizontalAlignment(SwingConstants.CENTER); 
 
 
 		jb_salvar.addActionListener(this);
-		jb_sair.addActionListener(this);
-		jb_calc.addActionListener(this);
-		jb_internet.addActionListener(this);
 
 
 		
@@ -141,6 +123,10 @@ public class Panico extends JFrame implements ActionListener {
 		}
 
 	}
+	public static void main(String[] args) {
 
+	new Panico();
+
+	}
 
 }
