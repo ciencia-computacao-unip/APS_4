@@ -10,7 +10,7 @@ import javax.swing.border.LineBorder;
 import java.awt.Dimension;
 
 
-public class Telajogo extends JFrame implements ActionListener {
+public class TelaJogo extends JFrame implements ActionListener {
 
 
 	// DECLARANDO VARIAVEIS;
