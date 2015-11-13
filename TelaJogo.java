@@ -10,7 +10,7 @@ import javax.swing.border.LineBorder;
 import java.awt.Dimension;
 
 
-public class Telajogo extends JFrame implements ActionListener {
+public class TelaJogo extends JFrame implements ActionListener {
 
 	// DECLARANDO VARIAVEIS;
 	private static final long serialVersionUID = 1L;
@@ -24,7 +24,7 @@ public class Telajogo extends JFrame implements ActionListener {
 
 
 	//MTD. CONSTRUTOR;
-	public TelaJogo
+	public TelaJogo() {
 		super("TelaJogo");
 
 		//Setando configs da janela
@@ -47,8 +47,6 @@ public class Telajogo extends JFrame implements ActionListener {
 		jp_south = new JPanel(new FlowLayout());
 		jp_east = new JPanel(new FlowLayout());
 		jp_west = new JPanel(new FlowLayout());
-
-
 
 
 		//MENU
