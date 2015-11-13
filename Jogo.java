@@ -49,15 +49,16 @@ public class Jogo extends JFrame implements ActionListener {
 		jp_east = new JPanel(new FlowLayout());
 		jp_west = new JPanel(new FlowLayout());
 
-		//BOTOES DO JOGO
-
-		Color[] cores = {null,Color.BLUE,Color.RED,Color.YELLOW,Color.GREEN,Color.BLACK,Color.CYAN,Color.MAGENTA,Color.WHITE};
-
+		
 
 		//JOGO
 
 		for(int x=1;x<=4;x++){
-			botoesDeJogo[x-1]= new BotaoJogo(x,false);
+			if(Configuracoes.modoDaltonico == true){
+				botoesDeJogo[x-1]= new BotaoJogo(x,true);
+			}else{
+				botoesDeJogo[x-1]= new BotaoJogo(x,false);
+			}
 			jp_center.add(botoesDeJogo[x-1]);
 			botoesDeJogo[x-1].addActionListener(this);
 
@@ -73,45 +74,18 @@ public class Jogo extends JFrame implements ActionListener {
 			botoesDeMenu[x].setForeground(Color.WHITE);
 		}
 
-		if(daltonico==0){
 
-			jp_north.setBackground(Color.BLACK);
-			jp_south.setBackground(Color.BLACK);
-			jp_east.setBackground(Color.BLACK);
-			jp_west.setBackground(Color.BLACK);
+		jp_north.setBackground(Color.BLACK);
+		jp_south.setBackground(Color.BLACK);
+		jp_east.setBackground(Color.BLACK);
+		jp_west.setBackground(Color.BLACK);
 
-			for(int x=1;x<=4;x++){
-
-				Color Col = cores[x];
-				botoesDeJogo[x-1].setBorder(new LineBorder(Col, 10));
-
-			}
-			for(int x=0;x<=1;x++){
-				botoesDeMenu[x].setBackground(Color.BLACK);
-			}
-
-		}else{
-
-			jp_north.setBackground(Color.GRAY);
-			jp_south.setBackground(Color.GRAY);
-			jp_east.setBackground(Color.GRAY);
-			jp_west.setBackground(Color.GRAY);
-
-			for(int x=1;x<5;x++){
-
-				Color Col = cores[x+4];
-				botoesDeJogo[x].setBorder(new LineBorder(Col, 10));
-				botoesDeJogo[x].setBackground(Col);
-
-			}
-			for(int x=0;x<=1;x++){
-				botoesDeMenu[x].setBackground(Color.GRAY);
-			}
-
+		
+		for(int x=0;x<=1;x++){
+			botoesDeMenu[x].setBackground(Color.BLACK);
 		}
 
-
-
+		
 		//ADDS
 
 		frame.add(jp_total);
