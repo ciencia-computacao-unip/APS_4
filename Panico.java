@@ -25,7 +25,7 @@ public class Panico extends JFrame implements ActionListener {
 	private JLabel jl_titulo,jl_logo,jl_anotacoes;
 	private JButton jb_salvar,jb_sair,jb_calc,jb_internet;
 	private FileWriter arquivo;
-	private ImageIcon logo,calc,internet;
+	private ImageIcon logo;
 
 
 	JFrame frame = new JFrame("Panico");
@@ -57,15 +57,12 @@ public class Panico extends JFrame implements ActionListener {
 		jl_titulo = new JLabel ("TRABALHO DE HISTORIA");
 
 
-		calc = new ImageIcon("calculadora.png","");
-		internet = new ImageIcon("internet.png","");
+	
 		ta_loucura = new JTextArea ("");
 		jl_logo = new JLabel();
 		jl_anotacoes = new JLabel("Quadro de Utilidades");
 		jb_salvar = new JButton("SALVAR");
 		jb_sair = new JButton();
-		jb_calc = new JButton(calc);
-		jb_internet = new JButton(internet);
 		logo = new ImageIcon(this.getClass().getResource("imagem.png"));
 
 
@@ -73,11 +70,7 @@ public class Panico extends JFrame implements ActionListener {
 
 		jb_sair.setPreferredSize(new Dimension(2, 2));
 		jb_sair.setBorderPainted(false);
-		jb_calc.setContentAreaFilled(false);
-		jb_calc.setPreferredSize(new Dimension(100, 100));
-		jb_internet.setPreferredSize(new Dimension(100, 100));
-		jb_internet.setContentAreaFilled(false);
-
+		
 		ta_loucura.setWrapStyleWord(true);
 		jl_anotacoes.setFont(new Font("Dialog", Font.BOLD, 20));
 		ta_loucura.setFont(new Font("Dialog", Font.BOLD, 16));
@@ -112,8 +105,6 @@ public class Panico extends JFrame implements ActionListener {
 		jp_west.add(jp_westbd);
 		jp_westbd.add(jl_anotacoes,BorderLayout.NORTH);
 		jp_westbd.add(jp_westbt,BorderLayout.CENTER);
-		jp_westbt.add(jb_calc);
-		jp_westbt.add(jb_internet);
 		jp_total.add(jb_sair,BorderLayout.EAST);
 		jp_total.add(ta_loucura,BorderLayout.CENTER);
 		jl_titulo.setHorizontalAlignment(SwingConstants.CENTER);
@@ -143,31 +134,13 @@ public class Panico extends JFrame implements ActionListener {
 			} catch (Exception k) {
 				k.printStackTrace();
 			}
-		}if (e.getSource()== jb_calc){
-			try{
-				Runtime.getRuntime().exec("cmd.exe /c start calc" );
-			}catch(IOException iOException)
-			{
-				iOException.printStackTrace();
-			}
-		}if (e.getSource()== jb_internet){
-			try{
-				Runtime.getRuntime().exec("cmd.exe /c start iexplore.exe" );
-			}catch(IOException iOException)
-			{
-				iOException.printStackTrace();
-			}
-		}if (e.getSource()== jb_sair){
+		if (e.getSource()== jb_sair){
 			new Menu();
 			frame.dispose();
-			
+		}
 		}
 
 	}
 
-	public static void main(String[] args) {
 
-	new Panico();
-	
-	}
 }
