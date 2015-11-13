@@ -82,7 +82,7 @@ public class TelaDeOpcoes extends JFrame implements ActionListener {
 
 		//DALTONISMO
 
-	
+
 		if(Configuracoes.modoDaltonico==true){
 			dOn = true;
 			dOff = false;
@@ -110,7 +110,7 @@ public class TelaDeOpcoes extends JFrame implements ActionListener {
 
 
 		//VOLUME
-		
+
 		if(Configuracoes.somNoJogo==true){
 			sOn = true;
 			sOff = false;
@@ -142,7 +142,7 @@ public class TelaDeOpcoes extends JFrame implements ActionListener {
 
 		//SLIDER
 
-		jl_status = new JLabel("Volume : 50",JLabel.CENTER);
+		jl_status = new JLabel("Volume : " + Configuracoes.volumeDosSons,JLabel.CENTER);
 		jl_volslider = new JLabel("VOLUME : ");
 		slider = new JSlider(JSlider.HORIZONTAL,0,100,50);
 		jp_volslider.add(jl_volslider);
@@ -150,9 +150,11 @@ public class TelaDeOpcoes extends JFrame implements ActionListener {
 		jp_volslider.add(jl_status);
 		slider.addChangeListener(new ChangeListener() {
 			public void stateChanged(ChangeEvent e) {
+			Configuracoes.volumeDosSons = slider.getValue(); // SALVA VALOR DO SLIDER NO Configurações.java
 			jl_status.setText("Volume : "
-			+ ((JSlider)e.getSource()).getValue());
-			}
+			+ Configuracoes.volumeDosSons);
+		}
+
 		});
 		if(sOn ==true){
 			jp_volslider.setVisible(true);
@@ -191,7 +193,7 @@ public class TelaDeOpcoes extends JFrame implements ActionListener {
 	}if (e.getSource()== radoff_vol){
 		jp_volslider.setVisible(false);
 	}if (e.getSource()== Bot_save){
-		if(radoff_vol.isSelected()){
+		if(radon_vol.isSelected()){
 			Configuracoes.somNoJogo = true;
 		}if(radoff_vol.isSelected()){
 			Configuracoes.somNoJogo = false;
