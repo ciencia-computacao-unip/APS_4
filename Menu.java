@@ -20,6 +20,8 @@ import java.util.ArrayList;
 public class Menu extends JFrame implements ActionListener {
 
 
+
+	
 	// DECLARANDO VARIAVEIS;
 	private static final long serialVersionUID = 1L;
 	private JPanel jp_total,jp_center,jp_lateral,jp_lateral2,jp_top;
