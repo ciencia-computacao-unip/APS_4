@@ -29,7 +29,7 @@ public class TelaNomeUsuario extends JFrame implements ActionListener{
     this.add(botaoEnviar);
 
     botaoEnviar.addActionListener(this);
-	
+
 	this.getRootPane().setDefaultButton(botaoEnviar);
 
   }
@@ -37,7 +37,7 @@ public class TelaNomeUsuario extends JFrame implements ActionListener{
   public void actionPerformed(ActionEvent evento){
     if(evento.getSource() == botaoEnviar){
       //Main.nomeUsuario = campoNome.getText();
-      new Menu();
+      //new Menu();
       this.dispose();
     }
   }
