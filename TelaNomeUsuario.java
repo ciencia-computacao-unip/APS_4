@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 public class TelaNomeUsuario extends JFrame implements ActionListener{
   private static final long serialVersionUID = 1L;
@@ -18,7 +19,7 @@ public class TelaNomeUsuario extends JFrame implements ActionListener{
   public TelaNomeUsuario (){
     super("Genius - Login");
     this.setSize(400,100);
-	this.setLocation(100,100);
+    this.setLocation(100,100);
     this.setVisible(true);
     this.setLayout(new FlowLayout());
     this.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -36,9 +37,13 @@ public class TelaNomeUsuario extends JFrame implements ActionListener{
 
   public void actionPerformed(ActionEvent evento){
     if(evento.getSource() == botaoEnviar){
-      //Main.nomeUsuario = campoNome.getText();
-      //new Menu();
-      this.dispose();
+      Configuracoes.nomeUsuario = campoNome.getText();
+      if( Configuracoes.nomeUsuario != null && !Configuracoes.nomeUsuario.isEmpty() ){
+        new Menu();
+        this.dispose();
+      }else{
+        JOptionPane.showMessageDialog(null,"Digite um nome de usuario");
+      }
     }
   }
 

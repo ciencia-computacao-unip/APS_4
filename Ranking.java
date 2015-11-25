@@ -1,5 +1,10 @@
-import java.awt.*;
-import javax.swing.*;
+import java.awt.BorderLayout;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JTabbedPane;
+import javax.swing.JTable;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -11,20 +16,9 @@ public class Ranking extends JFrame implements ActionListener{
 	private static final String DATABASE = "aps4";
 	private static final String DRIVER_CONEXAO = "com.mysql.jdbc.Driver";
 	private static final String STR_CONEXAO = "";
-	private JTable tabela;
-	private JLabel jogador, pontuacao;
 	private JButton voltar;
-	private JPanel modo1, modo2, modo3, p1fundo, modo1flow;
+	private JPanel modo1, modo2, modo3;
 	private JTabbedPane modos;
-	private  String [] colunas = {"Pontuacao", "Jogador"};
-	
-    Object [][] dados = {
-		{"10", "Player1"},
-		{"20", "Player2"},
-		{"30", "Player3"},
-    };
-
-   
 
 	public Ranking(){
 
@@ -36,30 +30,43 @@ public class Ranking extends JFrame implements ActionListener{
 		this.setResizable(false);
 		this.setLayout(new BorderLayout());
 
-		tabela = new JTable(dados, colunas);
-
-		modo1 = new JPanel ();
-		p1fundo = new JPanel ();
-		modo1flow = new JPanel ();
 		modos = new JTabbedPane ();
-		jogador = new JLabel ("Jogadores");
-		pontuacao  = new JLabel ("Pontuação");
 		voltar = new JButton ("Voltar");
+
+		createModo1();
+		createModo2();
+		createModo3();
 
 		modos.addTab("Modo 1", modo1);
 		modos.addTab("Modo 2", modo2);
 		modos.addTab("Modo 3", modo3);
 
-		modo1flow.setLayout(new FlowLayout());
-		this.setLayout(new BorderLayout());
-		this.add(tabela, BorderLayout.CENTER);
 		this.add(voltar, BorderLayout.SOUTH);
-		this.add(modo1flow, BorderLayout.NORTH);
+		this.add(modos, BorderLayout.CENTER);
 
-		modo1flow.add(pontuacao);
-		modo1flow.add(jogador);
-		modo1.add(p1fundo);
 		voltar.addActionListener(this);
+		}
+
+		public void createModo1()
+		{
+			JTable tabela1 = new JTable();
+			modo1 = new JPanel ();
+			modo1.setLayout(null);
+			modo1.add(tabela1);
+		}
+		public void createModo2()
+		{
+			JTable tabela2 = new JTable();
+			modo2 = new JPanel ();
+			modo2.setLayout(null);
+			modo2.add(tabela2);
+		}
+		public void createModo3()
+		{
+			JTable tabela3 = new JTable();
+			modo3 = new JPanel ();
+			modo3.setLayout(null);
+			modo3.add(tabela3);
 
 		}
 		public void actionPerformed(ActionEvent evento){

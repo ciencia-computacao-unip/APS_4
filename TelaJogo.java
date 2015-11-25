@@ -10,7 +10,7 @@ import javax.swing.border.LineBorder;
 import java.awt.Dimension;
 
 
-public class Jogo extends JFrame implements ActionListener {
+public class TelaJogo extends JFrame implements ActionListener {
 
 	// DECLARANDO VARIAVEIS;
 	private static final long serialVersionUID = 1L;
@@ -24,9 +24,8 @@ public class Jogo extends JFrame implements ActionListener {
 
 
 	//MTD. CONSTRUTOR;
-	public Jogo(){
-
-		super("Jogo");
+	public TelaJogo() {
+		super("TelaJogo");
 
 		//Setando configs da janela
 		Dimension tamanhoDaTela = Toolkit.getDefaultToolkit().getScreenSize();
@@ -49,20 +48,6 @@ public class Jogo extends JFrame implements ActionListener {
 		jp_east = new JPanel(new FlowLayout());
 		jp_west = new JPanel(new FlowLayout());
 
-		
-
-		//JOGO
-
-		for(int x=1;x<=4;x++){
-			if(Configuracoes.modoDaltonico == true){
-				botoesDeJogo[x-1]= new BotaoJogo(x,true);
-			}else{
-				botoesDeJogo[x-1]= new BotaoJogo(x,false);
-			}
-			jp_center.add(botoesDeJogo[x-1]);
-			botoesDeJogo[x-1].addActionListener(this);
-
-		}
 
 		//MENU
 		String[] textosBotoes = {"JOGAR","VOLTAR"};
@@ -80,12 +65,12 @@ public class Jogo extends JFrame implements ActionListener {
 		jp_east.setBackground(Color.BLACK);
 		jp_west.setBackground(Color.BLACK);
 
-		
+
 		for(int x=0;x<=1;x++){
 			botoesDeMenu[x].setBackground(Color.BLACK);
 		}
 
-		
+
 		//ADDS
 
 		frame.add(jp_total);
@@ -107,7 +92,7 @@ public class Jogo extends JFrame implements ActionListener {
 
 	public static void main(String[] args) {
 
-	new Jogo();
+	new TelaJogo();
 
 	}
 }
