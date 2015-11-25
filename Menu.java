@@ -59,7 +59,7 @@ public class Menu extends JFrame implements ActionListener {
 		jl_nome.setHorizontalAlignment(SwingConstants.CENTER);
 
 		//CENTERTOP
-		String[] menus = {"MODO JOGO 1", "RANKING", "MODO JOGO 2", "OPCOES", "MODO JOGO 3", "SAIR"};
+		String[] menus = {"MODO JOGO REPITA A SEQUÊNCIA", "RANKING", "MODO JOGO REPITA A SEQUÊNCIA COM TEMPO", "OPCÕES", "MODO JOGO CRIE SUA SEQUÊNCIA", "SAIR"};
 
 		for( int x = 0; x < menus.length; x++ ){
 				botao.add( new BotaoMenu(menus[x]));
